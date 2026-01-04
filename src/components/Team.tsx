@@ -83,7 +83,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className="team-card"
+              className="team-card group"
               variants={itemVariants}
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[3/4]">

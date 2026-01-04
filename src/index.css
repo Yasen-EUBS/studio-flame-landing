@@ -129,7 +129,7 @@
   }
 
   .team-card {
-    @apply relative overflow-hidden rounded-2xl group;
+    @apply relative overflow-hidden rounded-2xl;
   }
 
   .section-title {
