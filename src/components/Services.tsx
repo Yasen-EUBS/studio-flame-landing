@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { Scissors, Sparkles } from 'lucide-react';
+import { Scissors } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { FlameIcon, ComboIcon } from './FlameIcon';
 
 interface Service {
   nameKey: string;
@@ -28,7 +29,7 @@ const Services = () => {
     },
     {
       titleKey: 'services.beard',
-      icon: <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 10c0 4.4 3.6 8 8 8s8-3.6 8-8"/><path d="M12 18v4"/><path d="M8 22h8"/><circle cx="12" cy="6" r="4"/></svg>,
+      icon: <FlameIcon className="w-8 h-8" inverted />,
       services: [
         { nameKey: 'services.beard_trim', price: '20.00' },
         { nameKey: 'services.beard_shave', price: '25.00' },
@@ -36,7 +37,7 @@ const Services = () => {
     },
     {
       titleKey: 'services.combos',
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <ComboIcon className="w-8 h-8" />,
       services: [
         { nameKey: 'services.combo', price: '50.00' },
         { nameKey: 'services.full_service', price: '60.00' },

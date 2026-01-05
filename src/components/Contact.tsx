@@ -29,14 +29,14 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5647193547!2d23.3071!3d42.6731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856ebe8a6f1d%3A0x5e7e3e30ab3a3c3f!2sul.%20%22Gorski%20patnik%22%2040A%2C%201421%20g.k.%20Lozenets%2C%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.089!2d23.308!3d42.673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856f0a8f3a8d%3A0x7e8f3a8d5e7e3e30!2sulitsa%20%22Gorski%20patnik%22%2040A%2C%20g.k.%20Lozenets%2C%20Sofia!5e0!3m2!1sen!2sbg!4v1704499200000!5m2!1sen!2sbg"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Studio Flame Location - Barber Shop Sofia Lozenets"
+              title="Studio Flame Location - ulitsa Gorski patnik 40A, Lozenets, Sofia"
               className="grayscale contrast-125 brightness-75"
             />
           </motion.div>
