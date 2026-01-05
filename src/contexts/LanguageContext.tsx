@@ -18,9 +18,17 @@ export const translations: Translations = {
   
   // Hero
   'hero.title': { bg: 'Studio Flame', en: 'Studio Flame' },
+  'hero.h1': { bg: 'Бръснарница София Лозенец', en: 'Barber Shop Sofia Lozenets' },
   'hero.subtitle': { bg: 'Където детайлът е закон.', en: 'Where detail is law.' },
   'hero.description': { bg: 'Професионално бръснарство в сърцето на Лозенец.', en: 'Professional barbering in the heart of Lozenets.' },
   'hero.cta': { bg: 'Запази час', en: 'Book Now' },
+  
+  // About
+  'about.title': { bg: 'За нас', en: 'About Us' },
+  'about.text': { 
+    bg: 'Studio Flame е мястото в сърцето на Лозенец, където съчетаваме street културата с безкомпромисно качество. Нашите Senior Barbers Николай и Ангел се грижат за твоя стил с внимание към всеки детайл.', 
+    en: 'Studio Flame is the place in the heart of Lozenets where we combine street culture with uncompromising quality. Our Senior Barbers Nikolay and Angel take care of your style with attention to every detail.' 
+  },
   
   // Services
   'services.title': { bg: 'Нашите услуги', en: 'Our Services' },
@@ -28,14 +36,13 @@ export const translations: Translations = {
   'services.haircuts': { bg: 'Подстригване', en: 'Haircuts' },
   'services.beard': { bg: 'Брада', en: 'Beard' },
   'services.combos': { bg: 'Комбо', en: 'Combos' },
-  'services.haircut.classic': { bg: 'Класическо подстригване', en: 'Classic Haircut' },
-  'services.haircut.fade': { bg: 'Fade подстригване', en: 'Fade Haircut' },
-  'services.haircut.kids': { bg: 'Детско подстригване', en: 'Kids Haircut' },
-  'services.beard.trim': { bg: 'Оформяне на брада', en: 'Beard Trim' },
-  'services.beard.shave': { bg: 'Бръснене с нож', en: 'Hot Towel Shave' },
-  'services.combo.full': { bg: 'Подстригване + Брада', en: 'Haircut + Beard' },
-  'services.combo.deluxe': { bg: 'Делукс пакет', en: 'Deluxe Package' },
-  'services.from': { bg: 'от', en: 'from' },
+  'services.mens_haircut': { bg: 'Мъжко подстригване', en: "Men's Haircut" },
+  'services.kids_haircut': { bg: 'Детско подстригване', en: "Kids Haircut" },
+  'services.head_shave': { bg: 'Бръснене на глава', en: 'Head Shave' },
+  'services.beard_trim': { bg: 'Оформяне на брада', en: 'Beard Trim' },
+  'services.beard_shave': { bg: 'Бръснене на брада', en: 'Beard Shave' },
+  'services.combo': { bg: 'Комбо (Коса + Брада)', en: 'Combo (Hair + Beard)' },
+  'services.full_service': { bg: 'Пълно обслужване', en: 'Full Service' },
   'services.currency': { bg: 'лв.', en: 'BGN' },
   
   // Team
@@ -47,17 +54,26 @@ export const translations: Translations = {
   'booking.subtitle': { bg: 'Запази своя час и изживей Studio Flame опита', en: 'Book your appointment and experience the Studio Flame treatment' },
   'booking.cta': { bg: 'Запази час през Fresha', en: 'Book via Fresha' },
   
+  // Instagram
+  'instagram.title': { bg: 'Последвай ни в Instagram', en: 'Follow us on Instagram' },
+  'instagram.handle': { bg: '@flame.studiol', en: '@flame.studiol' },
+  
   // Contact
   'contact.title': { bg: 'Намери ни', en: 'Find Us' },
-  'contact.address': { bg: 'ул. Горски Пътник 40А, София', en: '40A Gorski Patnik St, Sofia' },
+  'contact.address': { bg: 'ул. "Горски пътник" 40А, 1421 ж.к. Лозенец, София', en: 'ul. "Gorski patnik" 40A, 1421 Lozenets, Sofia' },
   'contact.hours.title': { bg: 'Работно време', en: 'Working Hours' },
   'contact.hours.weekdays': { bg: 'Пон - Пет: 10:00 - 20:00', en: 'Mon - Fri: 10:00 - 20:00' },
   'contact.hours.saturday': { bg: 'Събота: 10:00 - 18:00', en: 'Saturday: 10:00 - 18:00' },
   'contact.hours.sunday': { bg: 'Неделя: Почивен ден', en: 'Sunday: Closed' },
+  'contact.directions': { bg: 'Упътване', en: 'Get Directions' },
   
   // Footer
   'footer.rights': { bg: 'Всички права запазени.', en: 'All rights reserved.' },
   'footer.address': { bg: 'ул. Горски Пътник 40А, Лозенец, София', en: '40A Gorski Patnik St, Lozenets, Sofia' },
+  'footer.description': { 
+    bg: 'Studio Flame - Професионално бръснарство в Лозенец, София. Подстригване, оформяне на брада и street култура.', 
+    en: 'Studio Flame - Professional barbering in Lozenets, Sofia. Haircuts, beard styling and street culture.' 
+  },
 };
 
 interface LanguageContextType {

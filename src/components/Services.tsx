@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Scissors, CircleDot, Sparkles } from 'lucide-react';
+import { Scissors, CircleUser, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface Service {
@@ -21,25 +21,25 @@ const Services = () => {
       titleKey: 'services.haircuts',
       icon: <Scissors className="w-8 h-8" />,
       services: [
-        { nameKey: 'services.haircut.classic', price: '35' },
-        { nameKey: 'services.haircut.fade', price: '40' },
-        { nameKey: 'services.haircut.kids', price: '25' },
+        { nameKey: 'services.mens_haircut', price: '35' },
+        { nameKey: 'services.kids_haircut', price: '25' },
+        { nameKey: 'services.head_shave', price: '25' },
       ],
     },
     {
       titleKey: 'services.beard',
-      icon: <CircleDot className="w-8 h-8" />,
+      icon: <CircleUser className="w-8 h-8" />,
       services: [
-        { nameKey: 'services.beard.trim', price: '20' },
-        { nameKey: 'services.beard.shave', price: '30' },
+        { nameKey: 'services.beard_trim', price: '20' },
+        { nameKey: 'services.beard_shave', price: '25' },
       ],
     },
     {
       titleKey: 'services.combos',
       icon: <Sparkles className="w-8 h-8" />,
       services: [
-        { nameKey: 'services.combo.full', price: '50' },
-        { nameKey: 'services.combo.deluxe', price: '70' },
+        { nameKey: 'services.combo', price: '50' },
+        { nameKey: 'services.full_service', price: '60' },
       ],
     },
   ];
@@ -64,7 +64,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-24 relative overflow-hidden industrial-bg">
       {/* Background accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       

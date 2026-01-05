@@ -6,29 +6,32 @@ import barber2 from '@/assets/barber-2.jpeg';
 
 interface TeamMember {
   name: string;
-  role: {
-    bg: string;
-    en: string;
-  };
+  role: string;
   image: string;
-  instagram?: string;
+  instagram: string;
+  instagramHandle: string;
+  alt: string;
 }
 
 const Team = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const teamMembers: TeamMember[] = [
     {
-      name: 'Иван',
-      role: { bg: 'Старши бръснар', en: 'Senior Barber' },
+      name: 'Николай',
+      role: 'Senior Barber',
       image: barber1,
-      instagram: 'https://instagram.com',
+      instagram: 'https://instagram.com/justgotnikey',
+      instagramHandle: '@justgotnikey',
+      alt: 'Senior Barber Николай - Studio Flame Sofia',
     },
     {
-      name: 'Георги',
-      role: { bg: 'Майстор-стилист', en: 'Master Stylist' },
+      name: 'Ангел',
+      role: 'Senior Barber',
       image: barber2,
-      instagram: 'https://instagram.com',
+      instagram: 'https://instagram.com/angel_cuts_hair',
+      instagramHandle: '@angel_cuts_hair',
+      alt: 'Senior Barber Ангел - Studio Flame Sofia',
     },
   ];
 
@@ -52,7 +55,7 @@ const Team = () => {
   };
 
   return (
-    <section id="team" className="py-24 relative overflow-hidden bg-charcoal-deep">
+    <section id="team" className="py-24 relative overflow-hidden industrial-bg">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -86,13 +89,13 @@ const Team = () => {
               className="team-card group"
               variants={itemVariants}
             >
-              <div className="relative overflow-hidden rounded-2xl aspect-[3/4]">
+              <div className="relative overflow-hidden rounded-2xl aspect-[3/4] service-card p-0">
                 {/* Image */}
-                <motion.img
+                <img
                   src={member.image}
-                  alt={member.name}
+                  alt={member.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  whileHover={{ scale: 1.05 }}
+                  loading="lazy"
                 />
 
                 {/* Overlay */}
@@ -103,26 +106,25 @@ const Team = () => {
                   <h3 className="font-heading text-3xl text-foreground mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-primary font-medium uppercase tracking-wide text-sm">
-                    {member.role[language]}
+                  <p className="text-primary font-medium uppercase tracking-wide text-sm mb-3">
+                    {member.role}
                   </p>
 
-                  {member.instagram && (
-                    <motion.a
-                      href={member.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-4 text-muted-foreground hover:text-primary transition-colors"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Instagram size={20} />
-                    </motion.a>
-                  )}
+                  <motion.a
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Instagram size={18} />
+                    <span className="text-sm font-medium">{member.instagramHandle}</span>
+                  </motion.a>
                 </div>
 
                 {/* Flame accent */}
-                <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-primary animate-flame-pulse" />
+                <div className="absolute top-4 right-4 w-3 h-3 rounded-full bg-primary animate-pulse" />
               </div>
             </motion.div>
           ))}
