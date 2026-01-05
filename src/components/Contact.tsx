@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { MapPin, Clock, Instagram, Phone } from 'lucide-react';
+import { MapPin, Clock, Instagram, Phone, Navigation } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Contact = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-24 relative bg-background">
+    <section id="contact" className="py-24 relative industrial-bg">
       <div className="container-flame">
         {/* Section Header */}
         <motion.div
@@ -22,35 +22,35 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Map */}
           <motion.div
-            className="rounded-2xl overflow-hidden glass-card h-[400px]"
+            className="rounded-2xl overflow-hidden service-card h-[400px] p-0"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5647193547!2d23.3071!3d42.6731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDQwJzIzLjIiTiAyM8KwMTgnMjUuNiJF!5e0!3m2!1sen!2sbg!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5647193547!2d23.3071!3d42.6731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856ebe8a6f1d%3A0x5e7e3e30ab3a3c3f!2sul.%20%22Gorski%20patnik%22%2040A%2C%201421%20g.k.%20Lozenets%2C%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Studio Flame Location"
+              title="Studio Flame Location - Barber Shop Sofia Lozenets"
               className="grayscale contrast-125 brightness-75"
             />
           </motion.div>
 
           {/* Contact Info */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Address */}
-            <div className="glass-card p-6 flex items-start gap-4">
+            <div className="service-card p-6 flex items-start gap-4">
               <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
                 <MapPin className="w-6 h-6" />
               </div>
@@ -65,7 +65,7 @@ const Contact = () => {
             </div>
 
             {/* Working Hours */}
-            <div className="glass-card p-6 flex items-start gap-4">
+            <div className="service-card p-6 flex items-start gap-4">
               <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
                 <Clock className="w-6 h-6" />
               </div>
@@ -81,19 +81,33 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Get Directions Button */}
+            <motion.a
+              href="https://www.google.com/maps/dir//ul.+%22Gorski+patnik%22+40A,+1421+g.k.+Lozenets,+Sofia,+Bulgaria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-flame inline-flex items-center gap-2 w-full justify-center"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Navigation size={20} />
+              {t('contact.directions')}
+            </motion.a>
+
             {/* Social & Contact */}
-            <div className="glass-card p-6">
+            <div className="service-card p-6">
               <h3 className="font-heading text-xl text-foreground mb-4 uppercase tracking-wide">
                 Social
               </h3>
               <div className="flex items-center gap-4">
                 <motion.a
-                  href="https://instagram.com/studioflame"
+                  href="https://www.instagram.com/flame.studiol/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
+                  aria-label="Follow Studio Flame on Instagram"
                 >
                   <Instagram className="w-6 h-6" />
                 </motion.a>
@@ -102,6 +116,7 @@ const Contact = () => {
                   className="p-3 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
+                  aria-label="Call Studio Flame"
                 >
                   <Phone className="w-6 h-6" />
                 </motion.a>

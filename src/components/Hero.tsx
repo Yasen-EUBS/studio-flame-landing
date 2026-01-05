@@ -12,7 +12,8 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img 
           src={heroBg} 
-          alt="" 
+          alt="Studio Flame Interior - Barber Shop Sofia Lozenets"
+          loading="eager"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
@@ -55,17 +56,36 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Main Title */}
+          {/* SEO H1 */}
           <motion.h1
+            className="sr-only"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            {t('hero.h1')}
+          </motion.h1>
+          
+          <motion.span
+            className="text-primary font-medium uppercase tracking-[0.3em] text-sm md:text-base block mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {t('hero.h1')}
+          </motion.span>
+          
+          {/* Main Title */}
+          <motion.div
             className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-wider mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
+            aria-hidden="true"
           >
             <span className="text-foreground">{t('hero.title').split(' ')[0]}</span>
             <br />
             <span className="text-gradient-flame">{t('hero.title').split(' ')[1]}</span>
-          </motion.h1>
+          </motion.div>
 
           {/* Tagline */}
           <motion.p
