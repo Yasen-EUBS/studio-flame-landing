@@ -19,7 +19,7 @@ export const translations: Translations = {
   // Hero
   'hero.title': { bg: 'Studio Flame', en: 'Studio Flame' },
   'hero.h1': { bg: 'Бръснарница София Лозенец', en: 'Barber Shop Sofia Lozenets' },
-  'hero.subtitle': { bg: 'Където детайлът е закон.', en: 'Where detail is law.' },
+  'hero.subtitle': { bg: "You ain't ugly, you just need the right cut", en: "You ain't ugly, you just need the right cut" },
   'hero.description': { bg: 'Професионално бръснарство в сърцето на Лозенец.', en: 'Professional barbering in the heart of Lozenets.' },
   'hero.cta': { bg: 'Запази час', en: 'Book Now' },
   

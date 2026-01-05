@@ -5,7 +5,7 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Team from '@/components/Team';
 import BookingCTA from '@/components/BookingCTA';
-import InstagramFeed from '@/components/InstagramFeed';
+import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -16,11 +16,11 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
-          <About />
           <Services />
           <Team />
+          <About />
           <BookingCTA />
-          <InstagramFeed />
+          <Gallery />
           <Contact />
         </main>
         <Footer />
