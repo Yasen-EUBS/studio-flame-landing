@@ -14,9 +14,10 @@ const Hero = () => {
           src={heroBg} 
           alt="Studio Flame Interior - Barber Shop Sofia Lozenets"
           loading="eager"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
       
       {/* Flame Glow Effect */}
