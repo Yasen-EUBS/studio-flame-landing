@@ -33,16 +33,10 @@ export const translations: Translations = {
   // Services
   'services.title': { bg: 'Нашите услуги', en: 'Our Services' },
   'services.subtitle': { bg: 'Професионално обслужване с внимание към детайла', en: 'Professional service with attention to detail' },
-  'services.haircuts': { bg: 'Подстригване', en: 'Haircuts' },
-  'services.beard': { bg: 'Брада', en: 'Beard' },
-  'services.combos': { bg: 'Комбо', en: 'Combos' },
   'services.mens_haircut': { bg: 'Мъжко подстригване', en: "Men's Haircut" },
-  'services.kids_haircut': { bg: 'Детско подстригване', en: "Kids Haircut" },
-  'services.head_shave': { bg: 'Бръснене на глава', en: 'Head Shave' },
   'services.beard_trim': { bg: 'Оформяне на брада', en: 'Beard Trim' },
-  'services.beard_shave': { bg: 'Бръснене на брада', en: 'Beard Shave' },
   'services.combo': { bg: 'Комбо (Коса + Брада)', en: 'Combo (Hair + Beard)' },
-  'services.full_service': { bg: 'Пълно обслужване', en: 'Full Service' },
+  'services.father_son': { bg: 'Баща и Син', en: 'Father & Son' },
   'services.currency': { bg: '€', en: '€' },
   
   // Team

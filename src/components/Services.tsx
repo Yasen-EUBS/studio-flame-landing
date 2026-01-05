@@ -1,47 +1,37 @@
 import { motion } from 'framer-motion';
-import { Scissors } from 'lucide-react';
+import { Scissors, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { FlameIcon, ComboIcon } from './FlameIcon';
 
 interface Service {
   nameKey: string;
   price: string;
-}
-
-interface ServiceCategory {
-  titleKey: string;
   icon: React.ReactNode;
-  services: Service[];
 }
 
 const Services = () => {
   const { t } = useLanguage();
 
-  const categories: ServiceCategory[] = [
-    {
-      titleKey: 'services.haircuts',
-      icon: <Scissors className="w-8 h-8" />,
-      services: [
-        { nameKey: 'services.mens_haircut', price: '35.00' },
-        { nameKey: 'services.kids_haircut', price: '25.00' },
-        { nameKey: 'services.head_shave', price: '25.00' },
-      ],
+  const services: Service[] = [
+    { 
+      nameKey: 'services.mens_haircut', 
+      price: '20.00',
+      icon: <Scissors className="w-6 h-6" />
     },
-    {
-      titleKey: 'services.beard',
-      icon: <FlameIcon className="w-8 h-8" inverted />,
-      services: [
-        { nameKey: 'services.beard_trim', price: '20.00' },
-        { nameKey: 'services.beard_shave', price: '25.00' },
-      ],
+    { 
+      nameKey: 'services.beard_trim', 
+      price: '15.00',
+      icon: <FlameIcon className="w-6 h-6" inverted />
     },
-    {
-      titleKey: 'services.combos',
-      icon: <ComboIcon className="w-8 h-8" />,
-      services: [
-        { nameKey: 'services.combo', price: '50.00' },
-        { nameKey: 'services.full_service', price: '60.00' },
-      ],
+    { 
+      nameKey: 'services.combo', 
+      price: '30.00',
+      icon: <ComboIcon className="w-6 h-6" />
+    },
+    { 
+      nameKey: 'services.father_son', 
+      price: '38.00',
+      icon: <Users className="w-6 h-6" />
     },
   ];
 
@@ -86,44 +76,29 @@ const Services = () => {
 
         {/* Services Grid */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {categories.map((category, categoryIndex) => (
+          {services.map((service, index) => (
             <motion.div
-              key={categoryIndex}
-              className="service-card"
+              key={index}
+              className="service-card flex items-center justify-between"
               variants={itemVariants}
             >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-primary/10 text-primary">
-                  {category.icon}
+                  {service.icon}
                 </div>
-                <h3 className="font-heading text-2xl text-foreground uppercase tracking-wide">
-                  {t(category.titleKey)}
-                </h3>
+                <span className="text-foreground font-medium text-lg">
+                  {t(service.nameKey)}
+                </span>
               </div>
-
-              {/* Services List */}
-              <div className="space-y-4">
-                {category.services.map((service, serviceIndex) => (
-                  <div
-                    key={serviceIndex}
-                    className="flex items-center justify-between py-3 border-b border-border/50 last:border-0"
-                  >
-                    <span className="text-foreground font-medium">
-                      {t(service.nameKey)}
-                    </span>
-                    <span className="text-primary font-heading text-xl">
-                      {service.price} {t('services.currency')}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <span className="text-primary font-heading text-2xl">
+                {service.price} {t('services.currency')}
+              </span>
             </motion.div>
           ))}
         </motion.div>
