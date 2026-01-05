@@ -43,7 +43,7 @@ export const translations: Translations = {
   'services.beard_shave': { bg: 'Бръснене на брада', en: 'Beard Shave' },
   'services.combo': { bg: 'Комбо (Коса + Брада)', en: 'Combo (Hair + Beard)' },
   'services.full_service': { bg: 'Пълно обслужване', en: 'Full Service' },
-  'services.currency': { bg: 'лв.', en: 'BGN' },
+  'services.currency': { bg: '€', en: '€' },
   
   // Team
   'team.title': { bg: 'Нашият отбор', en: 'Our Team' },
