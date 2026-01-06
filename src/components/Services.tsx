@@ -96,7 +96,7 @@ const Services = () => {
                   {t(service.nameKey)}
                 </span>
               </div>
-              <span className="text-primary font-heading text-2xl">
+              <span className="text-primary font-heading text-2xl whitespace-nowrap">
                 {service.price} {t('services.currency')}
               </span>
             </motion.div>
