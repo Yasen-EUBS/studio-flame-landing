@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import beardIcon from '@/assets/beard-icon.webp';
 
 interface FlameIconProps {
   className?: string;
@@ -7,12 +8,15 @@ interface FlameIconProps {
 
 // The flame icon from the logo, can be rotated 180° for beard
 export const FlameIcon: FC<FlameIconProps> = ({ className = "w-8 h-8", inverted = false }) => {
+  if (inverted) {
+    return <img src={beardIcon} alt="Beard" className={className} />;
+  }
+  
   return (
     <svg 
       className={className} 
       viewBox="0 0 100 100" 
       fill="currentColor"
-      style={{ transform: inverted ? 'rotate(180deg)' : 'none' }}
     >
       {/* Flame shape matching the Studio Flame logo */}
       <path d="M50 5 L30 35 L15 55 L30 45 L25 75 L50 55 L75 75 L70 45 L85 55 L70 35 L50 5Z" />
@@ -31,14 +35,7 @@ export const ComboIcon: FC<{ className?: string }> = ({ className = "w-8 h-8" })
         <line x1="14.47" y1="14.48" x2="20" y2="20" />
         <line x1="8.12" y1="8.12" x2="12" y2="12" />
       </svg>
-      <svg 
-        className="w-4 h-4" 
-        viewBox="0 0 100 100" 
-        fill="currentColor"
-        style={{ transform: 'rotate(180deg)' }}
-      >
-        <path d="M50 5 L30 35 L15 55 L30 45 L25 75 L50 55 L75 75 L70 45 L85 55 L70 35 L50 5Z" />
-      </svg>
+      <img src={beardIcon} alt="Beard" className="w-4 h-4" />
     </div>
   );
 };
