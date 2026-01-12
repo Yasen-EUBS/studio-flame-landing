@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logoFlame from '@/assets/logo-flame.jpg';
+import logoFlame from '@/assets/logo.webp';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
