@@ -68,6 +68,27 @@ export const translations: Translations = {
     bg: 'Studio Flame - Професионално бръснарство в Лозенец, София. Подстригване, оформяне на брада и street култура.', 
     en: 'Studio Flame - Professional barbering in Lozenets, Sofia. Haircuts, beard styling and street culture.' 
   },
+
+  // Shop
+  'nav.shop': { bg: 'Магазин', en: 'Shop' },
+  'shop.title': { bg: 'Магазин', en: 'Shop' },
+  'shop.subtitle': { bg: 'Продукти за професионална грижа', en: 'Professional grooming products' },
+  'shop.addToCart': { bg: 'Добави', en: 'Add to Cart' },
+  'shop.cart': { bg: 'Кошница', en: 'Cart' },
+  'shop.cartEmpty': { bg: 'Кошницата е празна', en: 'Your cart is empty' },
+  'shop.checkout': { bg: 'Поръчай', en: 'Checkout' },
+  'shop.total': { bg: 'Общо', en: 'Total' },
+  'shop.fullName': { bg: 'Име и Фамилия', en: 'Full Name' },
+  'shop.phone': { bg: 'Телефон', en: 'Phone' },
+  'shop.delivery': { bg: 'Метод на доставка', en: 'Delivery Method' },
+  'shop.deliveryEcont': { bg: 'Офис на Еконт', en: 'Econt Office' },
+  'shop.deliverySpeedy': { bg: 'Офис на Спиди', en: 'Speedy Office' },
+  'shop.deliveryHome': { bg: 'До адрес', en: 'Home Address' },
+  'shop.note': { bg: 'Бележка', en: 'Note' },
+  'shop.orderSuccess': { bg: 'Поръчката е приета успешно!', en: 'Order placed successfully!' },
+  'shop.remove': { bg: 'Премахни', en: 'Remove' },
+  'shop.price': { bg: 'Цена', en: 'Price' },
+  'shop.backToShop': { bg: '← Назад към магазина', en: '← Back to shop' },
 };
 
 interface LanguageContextType {
